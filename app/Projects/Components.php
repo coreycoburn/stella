@@ -4,9 +4,9 @@ namespace App\Projects;
 
 trait Components
 {
-    public function styledMenu($title, $choices)
+    public function styledMenu($title, $options)
     {
-        return $this->menu($title, $choices)
+        return $this->menu($title, $options)
             ->setForegroundColour('black')
             ->setBackgroundColour('cyan')
             ->disableDefaultItems()

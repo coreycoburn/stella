@@ -3,25 +3,10 @@
 namespace App\Projects\Javascript\Builders;
 
 use LaravelZero\Framework\Commands\Command;
-use Symfony\Component\Process\Process;
 
 final class CreateReactApp implements Builder
 {
     use BuilderTrait;
-
-    /**
-     * Laravel Zero Command.
-     *
-     * @var Command
-     */
-    private Command $command;
-
-    /*
-     * The name/directory of the application.
-     *
-     * @var string
-     */
-    private string $name;
 
     /**
      * CreateReactApp constructor.

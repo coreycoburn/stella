@@ -6,9 +6,9 @@ use App\Projects\Components;
 use App\Projects\Javascript\React;
 use LaravelZero\Framework\Commands\Command;
 
-class ReactCommand extends Command
+final class ReactCommand extends Command implements BuildCommand
 {
-    use Components;
+    use CommandTrait, Components;
 
     /**
      * The signature of the command.
@@ -24,19 +24,22 @@ class ReactCommand extends Command
      */
     protected $description = 'Create a React JS application';
 
-    /*
-     * The name/directory of the application.
+    /**
+     * Build menu title.
      *
      * @var string
      */
-    protected $name;
+    protected string $buildMenuTitle = 'React Build Tool Options';
 
     /**
-     * The Javascript build type (i.e. Create React App or Vite).
+     * Build menu options.
      *
-     * @var string
+     * @var array|string[]
      */
-    private $build;
+    protected array $buildMenuOptions = [
+        'create-react-app' => 'Create React App',
+        'vite' => 'Vite',
+    ];
 
     /**
      * Execute the console command.
@@ -56,29 +59,5 @@ class ReactCommand extends Command
         $this->info("cd $this->name");
 
         return true;
-    }
-
-    /*
-     * Collect user inputs to create application.
-     *
-     * @return void
-     */
-    private function composeInputs(): void
-    {
-        $this->build = $this->argument('build') ?? $this->buildMenu();
-        $this->name = $this->ask('What is the app name?');
-    }
-
-    /**
-     * Compose build selection menu.
-     *
-     * @return string
-     */
-    private function buildMenu(): string
-    {
-        return $this->styledMenu('Build Choice', [
-            'create-react-app' => 'Create React App',
-            'vite' => 'Vite',
-        ]);
     }
 }

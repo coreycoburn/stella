@@ -2,6 +2,7 @@
 
 namespace App\Projects\Javascript\Builders;
 
+use LaravelZero\Framework\Commands\Command;
 use Symfony\Component\Process\Process;
 
 /**
@@ -12,6 +13,20 @@ use Symfony\Component\Process\Process;
  */
 trait BuilderTrait
 {
+    /**
+     * Laravel Zero Command.
+     *
+     * @var Command
+     */
+    private Command $command;
+
+    /*
+     * The name/directory of the application.
+     *
+     * @var string
+     */
+    private string $name;
+
     /**
      * Execute the build script.
      *

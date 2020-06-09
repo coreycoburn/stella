@@ -9,20 +9,6 @@ final class Vite implements Builder
     use BuilderTrait;
 
     /**
-     * Laravel Zero Command.
-     *
-     * @var Command
-     */
-    private Command $command;
-
-    /*
-     * The name/directory of the application.
-     *
-     * @var string
-     */
-    private string $name;
-
-    /**
      * The implemented framework.
      *
      * @var string
