@@ -21,4 +21,4 @@ Special thanks to [Nuno Maduro](https://github.com/nunomaduro) for creating the 
 Stella is the Italian word for **star**. Us developers say the word **star** when we are referring to the asterisk symbol. The */asterisk/star represents a wildcard/all character in many programming languages. Hence, you are able to use this CLI project to install several application frameworks with one interface.
 
 ## License
-Stella is an open-source software licensed under the MIT license.
+Stella is an open-source software licensed under the [MIT license](https://github.com/coreycoburn/stella/blob/master/LICENSE).
