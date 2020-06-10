@@ -1,37 +1,24 @@
-<p align="center">
-    <img title="Laravel Zero" height="100" src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/logo/laravel-zero-readme.png" />
-</p>
+# Stella
+## Web Application CLI Scaffolding tool for the Full Stack.
 
-<p align="center">
-  <a href="https://github.com/laravel-zero/framework/actions"><img src="https://img.shields.io/github/workflow/status/laravel-zero/framework/Continuous%20Integration.svg" alt="Build Status"></img></a>
-  <a href="https://scrutinizer-ci.com/g/laravel-zero/framework"><img src="https://img.shields.io/scrutinizer/g/laravel-zero/framework.svg" alt="Quality Score"></img></a>
-  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://poser.pugx.org/laravel-zero/framework/d/total.svg" alt="Total Downloads"></a>
-  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://poser.pugx.org/laravel-zero/framework/v/stable.svg" alt="Latest Stable Version"></a>
-  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://poser.pugx.org/laravel-zero/framework/license.svg" alt="License"></a>
-</p>
+This is an opinionated rapid CLI installer for a few of the more popular web frameworks for both the front-end and back-end.
 
-<h4> <center>This is a <bold>community project</bold> and not an official Laravel one </center></h4>
+Have you ever started up a new project from the cli `npx create-react-app foo`, `vue create bar`, `laravel new baz`, then trying to integrate all of your additional files/packages for your project?
 
-Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is a micro-framework that provides an elegant starting point for your console application. It is an **unofficial** and customized version of Laravel optimized for building command-line applications.
+Examples:
+- Adding your dotfiles (.eslintrc.js, .prettierrc.js, .editorconfig)
+- Adding your project dependencies you include on every project (prop-types, memobind, styled-components, lodash, moment)
+- Customizing your build scripts (i.e. customized linter or test runner script)
+- Adding build hooks to your project (i.e. husky)
+- Automatically setting up your project with tools such as Tailwind CSS along with PostCSS 
 
-- Built on top of the [Laravel](https://laravel.com) components.
-- Optional installation of Laravel [Eloquent](https://laravel-zero.com/docs/database/), Laravel [Logging](https://laravel-zero.com/docs/logging/) and many others.
-- Supports interactive [menus](https://laravel-zero.com/docs/build-interactive-menus/) and [desktop notifications](https://laravel-zero.com/docs/send-desktop-notifications/) on Linux, Windows & MacOS.
-- Ships with a [Scheduler](https://laravel-zero.com/docs/task-scheduling/) and  a [Standalone Compiler](https://laravel-zero.com/docs/build-a-standalone-application/).
-- Integration with [Collision](https://github.com/nunomaduro/collision) - Beautiful error reporting
+<p style="color: yellow;">This project is in beta.</p>
 
-------
 
-## Documentation
+Special thanks to [Nuno Maduro](https://github.com/nunomaduro) for creating the Laravel Zero micro-framework. The Stella project uses Laravel Zero under the hood. Visit [laravel-zero.com](https://laravel-zero.com/) for more info.
 
-For full documentation, visit [laravel-zero.com](https://laravel-zero.com/).
-
-## Support the development
-**Do you like this project? Support it by donating**
-
-- PayPal: [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=66BYDWAT92N6L)
-- Patreon: [Donate](https://www.patreon.com/nunomaduro)
+## Why the name Stella?
+Stella is the Italian word for **star**. Us developers say the word **star** when we are referring to the asterisk symbol. The */asterisk/star represents a wildcard/all character in many programming languages. Hence, you are able to use this CLI project to install several application frameworks with one interface.
 
 ## License
-
-Laravel Zero is an open-source software licensed under the [MIT license](https://github.com/laravel-zero/laravel-zero/blob/stable/LICENSE.md).
+Stella is an open-source software licensed under the MIT license.
