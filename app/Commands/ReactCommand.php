@@ -8,7 +8,7 @@ use LaravelZero\Framework\Commands\Command;
 
 final class ReactCommand extends Command implements BuildCommand
 {
-    use CommandTrait, Components;
+    use BuildCommandTrait, Components;
 
     /**
      * The signature of the command.

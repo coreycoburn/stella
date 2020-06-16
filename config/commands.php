@@ -73,8 +73,16 @@ return [
     |
     */
 
-    'remove' => [
-        // ..
+    'remove' => (config('app.env') == 'development') ? [] : [
+        Illuminate\Database\Console\WipeCommand::class,
+        Illuminate\Database\Console\Migrations\MigrateCommand::class,
+        Illuminate\Database\Console\Migrations\MigrateMakeCommand::class,
+        Illuminate\Database\Console\Migrations\FreshCommand::class,
+        Illuminate\Database\Console\Migrations\InstallCommand::class,
+        Illuminate\Database\Console\Migrations\RefreshCommand::class,
+        Illuminate\Database\Console\Migrations\ResetCommand::class,
+        Illuminate\Database\Console\Migrations\RollbackCommand::class,
+        Illuminate\Database\Console\Migrations\StatusCommand::class,
     ],
 
 ];
