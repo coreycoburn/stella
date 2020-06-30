@@ -6,9 +6,8 @@ namespace App\Commands;
 
 use App\Projects\Components;
 use App\Projects\Javascript\Vue;
-use LaravelZero\Framework\Commands\Command;
 
-final class VueCommand extends Command implements BuildCommand
+final class VueCommand extends StellaCommands implements BuildCommand
 {
     use BuildCommandTrait, Components;
 

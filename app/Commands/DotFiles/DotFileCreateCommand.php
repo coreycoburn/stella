@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Commands\DotFiles;
 
+use App\Commands\StellaCommands;
 use App\Dotfile;
-use LaravelZero\Framework\Commands\Command;
 
-class DotFileCreateCommand extends Command
+class DotFileCreateCommand extends StellaCommands
 {
     /**
      * The signature of the command.
@@ -26,22 +26,19 @@ class DotFileCreateCommand extends Command
     /**
      * Execute the console command.
      *
-     * @return mixed
+     * @return void
      */
-    public function handle()
+    public function handle(): void
     {
         $this->info('Add a dotfile');
-        $name = $this->ask('What is the name?');
-        $scope = $this->ask('What is the scope? (optional)');
-        $build = $this->ask('What is the build? (optional)');
-        $url = $this->ask('What is the url?');
+        $name = $this->askRequired('What is the name?');
+        $description = $this->ask('Please write a description.');
+        $url = $this->askRequired('What is the url?');
 
         Dotfile::create(array_filter([
             'name' => $name,
-            'scope' => $scope,
-            'build' => $build,
+            'description' => $description,
             'url' => $url,
         ]));
-
     }
 }

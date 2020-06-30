@@ -30,10 +30,10 @@ class DotFileListCommand extends Command
      */
     public function handle(): bool
     {
-        $dotFiles = Dotfile::all(['name', 'scope', 'build', 'url']);
+        $dotFiles = Dotfile::all(['name', 'description', 'url']);
 
         if ($dotFiles->count() > 0) {
-            $this->table(['Name', 'Scope', 'Build', 'Url'], $dotFiles->toArray());
+            $this->table(['Name', 'Description', 'Url'], $dotFiles->toArray());
 
             return true;
         }

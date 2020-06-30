@@ -28,7 +28,7 @@ trait BuildCommandTrait
     public function composeInputs(): void
     {
         $this->build = $this->argument('build') ?? $this->buildMenu();
-        $this->name = $this->ask('What is the app name?');
+        $this->name = $this->askRequired('What is the app name?');
     }
 
     /**

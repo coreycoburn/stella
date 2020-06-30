@@ -6,9 +6,8 @@ namespace App\Commands;
 
 use App\Projects\Components;
 use App\Projects\Javascript\React;
-use LaravelZero\Framework\Commands\Command;
 
-final class ReactCommand extends Command implements BuildCommand
+final class ReactCommand extends StellaCommands implements BuildCommand
 {
     use BuildCommandTrait, Components;
 

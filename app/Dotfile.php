@@ -11,5 +11,5 @@ class Dotfile extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'scope', 'build', 'url'];
+    protected $fillable = ['name', 'description', 'url'];
 }

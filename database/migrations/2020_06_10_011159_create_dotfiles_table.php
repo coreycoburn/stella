@@ -16,8 +16,7 @@ class CreateDotfilesTable extends Migration
         Schema::create('dotfiles', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('scope')->nullable();
-            $table->string('build')->nullable();
+            $table->text('description')->nullable();
             $table->string('url');
             $table->timestamps();
         });
